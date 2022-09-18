@@ -37,6 +37,7 @@ variable "private_subnets_count" {}
 variable "public_subnets_count" {}
 variable "availability_zones" {}
 variable "public_subnets" {}
+variable "public_key" {}
 
 module "subnet_module" {
   source     = "./modules"
@@ -46,4 +47,9 @@ module "subnet_module" {
   public_subnets_count = var.public_subnets_count
   private_subnets_count = var.private_subnets_count
   public_subnets = var.public_subnets
+  public_key = var.public_key
 }
+
+
+
+
